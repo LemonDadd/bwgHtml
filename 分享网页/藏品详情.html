@@ -1,0 +1,63 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/musetwo.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/reset.js"></script>
+<script>
+	 $(document).ready(function(){
+		$("#play_audio").click(function(){
+			var m =  document.getElementById("music"); 
+			var img = document.getElementById('play_audio');
+			if(m.paused){
+				//alert("aaaa");
+				img.src = "images/jieshuo_bf.png";
+				m.play();
+			}else{
+				//alert("bbb");
+				img.src = "images/jieshuo_zt.png";
+				m.pause();
+			}
+		});
+		$("#music").bind('ended',function () {
+			var img = document.getElementById('play_audio');
+			img.src = "images/jieshuo_zt.png";
+		   //alert("播放完毕");
+		});
+    });
+
+</script>
+</head>
+
+<body>
+<div class="r_cpa">
+	<div class="r_xca">藏品详情</div>
+  <div class="r_cpb">
+    	<strong>年代：西周孝王</strong>
+        <p>高91.1厘米	口径75.6厘米</p>
+        <p>重201.5公斤</p>
+        <span>编号：YHO120</span>
+    </div>
+    <div  class="r_cpc">
+    	<img src="images/dad1_03.png"/>
+    	<audio src="xtw.mp3" controls="controls" preload id="music" hidden></audio>
+   	
+   		
+    </div> 
+    <ul class="background">
+			<li  class="zhishi"></li>
+			<li  class="xijie"></li>
+			<li  class="dingwei"></li>
+			<li  class="jieshuo" >
+				<img src="images/gc_xq_jieshuo.png" id="play_audio" >
+			</li>
+		</ul>
+</div>
+</body>
+
+</html>

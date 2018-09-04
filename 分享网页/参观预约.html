@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>无标题文档</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+ 
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/musetwo.css">
+   
+    <script type="text/javascript" src="js/reset.js"></script>
+     <link rel="stylesheet" href="css/jquery-weui.min.css">
+  
+ 
+</head>
+<body>
+
+<div class="r_xca">参观预约</div>
+
+<div class="r_xcc">
+    <p class="r_xcc_a">【预约提醒】</p>
+    <p class="r_xcc_b">1.我馆为观众提供网上预约服务，每张有效身份证件每天限定预约一次。</p>
+    <p class="r_xcc_b">2.预约成功后，请牢记预约号，并凭预约号码及有效证件在入口处予工作人员核查，核实后可直接从绿色通道入馆。
+        若未在预约时间段到馆，视为无效，谢谢合作。</p>
+    <p class="r_xcc_b">3.友情提醒各位预约最后一个时间段的朋友（15:00～15:40）务必于16:00之前入馆，16:00后博物馆将不再允许观众入场。</p>
+
+    <br />
+
+    <hr />
+    <div class="div_date">
+        <span class="date_left">参观日期</span>
+        <span class="date_right" id='picker'>选择参观日期></span>
+    </div>
+
+
+
+    <hr />
+    <div class="div_date">
+        <span class="date_left">参观时间</span>
+        <span class="date_right">选择参观时间></span>
+    </div>
+    <hr />
+
+
+</div>
+
+
+<br />
+
+<a class="r_wgb">预约</a>
+ <script type="text/javascript" src="js/jquery.js"></script>
+<script src="js/jquery-weui.min.js"></script>
+ <script>
+$("#picker").picker({
+  title: "请选择您的手机",
+  cols: [
+    {
+      textAlign: 'center',
+      values: ['iPhone 4', 'iPhone 4S', 'iPhone 5', 'iPhone 5S', 'iPhone 6', 'iPhone 6 Plus', 'iPad 2', 'iPad Retina', 'iPad Air', 'iPad mini', 'iPad mini 2', 'iPad mini 3']
+    }
+  ]
+});
+</script>
+</body>
+</html>
