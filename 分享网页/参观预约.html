@@ -10,26 +10,101 @@
    
     <script type="text/javascript" src="js/reset.js"></script>
      <link rel="stylesheet" href="css/jquery-weui.min.css">
-  
+  <style>
+      .titleV {
+          height: 40px;
+          line-height: 40px;
+          text-align: center;
+          font-size: 22px;
+          background-color: #99897a;
+          color: #ffffff;
+
+      }
+
+      .yy_content {
+          margin: 10px;
+          overflow: hidden;
+      }
+
+      hr {
+          margin: 0px;
+          padding: 0px;
+      }
+      .div_date {
+          margin-top: 5px;
+          margin-bottom: 5px;
+          padding: 0rem;
+          height: 40px;
+          width: 100%;
+      }
+
+      .date_left {
+          line-height: 40px;
+          display: block;
+          width: 50%;
+          height: 100%;
+          float: left;
+      }
+      .date_right {
+          display: block;
+          width: 50%;
+          height: 100%;
+          float: left;
+      }
+
+      .date_right input {
+          width: 100%;
+          height: 100%;
+          font-size: 20px;
+          text-align: right;
+          background-color: transparent;
+      }
+
+      .bottom {
+          width: 100%;
+          text-align: center;
+          margin-top: 20px;
+      }
+
+      .yy_btn {
+          width: 50%;
+          background-color: #99897a; /* Green */
+          border: none;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 10px 2px;
+          cursor: pointer;
+          border-radius: 15px;
+      }
+
+
+  </style>
  
 </head>
 <body>
 
-<div class="r_xca">参观预约</div>
+<div class="titleV">参观预约</div>
 
-<div class="r_xcc">
-    <p class="r_xcc_a">【预约提醒】</p>
-    <p class="r_xcc_b">1.我馆为观众提供网上预约服务，每张有效身份证件每天限定预约一次。</p>
-    <p class="r_xcc_b">2.预约成功后，请牢记预约号，并凭预约号码及有效证件在入口处予工作人员核查，核实后可直接从绿色通道入馆。
+<div class="yy_content">
+    <p style="color: #99897a">【预约提醒】</p>
+    <br />
+    <p>1.我馆为观众提供网上预约服务，每张有效身份证件每天限定预约一次。</p>
+    <br />
+    <p>2.预约成功后，请牢记预约号，并凭预约号码及有效证件在入口处予工作人员核查，核实后可直接从绿色通道入馆。
         若未在预约时间段到馆，视为无效，谢谢合作。</p>
-    <p class="r_xcc_b">3.友情提醒各位预约最后一个时间段的朋友（15:00～15:40）务必于16:00之前入馆，16:00后博物馆将不再允许观众入场。</p>
+    <br />
+    <p>3.友情提醒各位预约最后一个时间段的朋友（15:00～15:40）务必于16:00之前入馆，16:00后博物馆将不再允许观众入场。</p>
 
     <br />
 
     <hr />
     <div class="div_date">
         <span class="date_left">参观日期</span>
-        <span class="date_right" id='picker'>选择参观日期></span>
+        <span class="date_right"><input class="date_right" type="button" id='pickerDate'  value="选择参观日期>"/></span>
     </div>
 
 
@@ -37,28 +112,43 @@
     <hr />
     <div class="div_date">
         <span class="date_left">参观时间</span>
-        <span class="date_right">选择参观时间></span>
+        <span class="date_right"><input class="date_right" type="button" id='pickerTime'  value="选择参观时间>"/></span>
     </div>
     <hr />
-
 
 </div>
 
 
-<br />
 
-<a class="r_wgb">预约</a>
+</div>
+
+<div class="bottom">
+    <a class="yy_btn">预约</a>
+</div>
+
+
+
  <script type="text/javascript" src="js/jquery.js"></script>
 <script src="js/jquery-weui.min.js"></script>
  <script>
-$("#picker").picker({
-  title: "请选择您的手机",
+$("#pickerDate").picker({
+  title: "请选择参观日期",
   cols: [
     {
       textAlign: 'center',
       values: ['iPhone 4', 'iPhone 4S', 'iPhone 5', 'iPhone 5S', 'iPhone 6', 'iPhone 6 Plus', 'iPad 2', 'iPad Retina', 'iPad Air', 'iPad mini', 'iPad mini 2', 'iPad mini 3']
     }
   ]
+});
+
+$("#pickerTime").picker({
+    title: "请选择参观时间",
+    cols: [
+        {
+            textAlign: 'center',
+            values: ['iPhone 4', 'iPhone 4S', 'iPhone 5', 'iPhone 5S', 'iPhone 6', 'iPhone 6 Plus', 'iPad 2', 'iPad Retina', 'iPad Air', 'iPad mini', 'iPad mini 2', 'iPad mini 3']
+        }
+    ]
 });
 </script>
 </body>

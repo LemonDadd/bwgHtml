@@ -10,7 +10,7 @@ body{ font-family:"myFirstFont"; color:#333; -webkit-text-size-adjust:none; back
 a,u{ text-decoration:none;}
 i,em{ font-style:normal;}
 b,strong,h1,h2,h3,h4{ font-weight:normal;}
-input{border: none;outline: none;font-family:"Microsoft Yahei";}
+input{border: none;outline: none;font-family:"myFirstFont";}
 input:focus, textarea:focus,button {
 
     outline: none;
